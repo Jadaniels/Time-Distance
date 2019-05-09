@@ -1,14 +1,33 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      Ionic Blank
+      Time Distance Calculator
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
   <div class="ion-padding">
-    The world is your oyster.
-    <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
+       <ion-item>
+    <ion-label text-wrap>
+      <ion-text color="primary">
+        <p>This is an application to help you determine how long it will take to travel a determine distance based on average speed.</p>
+        <p>This application is only an guideline and does not factor issues such as road construction, weather issues, or accidents.</p>
+      </ion-text>
+    </ion-label>
+  </ion-item>
+   </div>
+
+  <div class="formula">
+  <ion-item>
+      <ion-label text-wrap>
+      <ion-text color="tertiary">
+          <p>Enter Total Distance:</p><ion-textarea type="number" name="Distance" clearOnEdit="true"></ion-textarea>
+		  <p>Enter Average Speed:</p><ion-textarea type="number" name="Speed" clearOnEdit="true"></ion-textarea>
+	      <p>The Average Travel Time is:</p><ion-content value="Time"></ion-content>
+          <ion-button fill="outline" (click)="Calculate()" color="medium">Calculate</ion-button>
+	  </ion-text>
+      </ion-label>
+  </ion-item>
   </div>
 </ion-content>
